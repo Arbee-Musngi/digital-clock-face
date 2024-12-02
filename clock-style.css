@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #fff;
+    background: url('hyatt.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.clock-container {
+    text-align: center;
+    color: #fff;
+}
+
+.clock {
+    width: 300px;
+    height: 300px;
+    border: 10px solid white;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.hour-hand, .minute-hand, .second-hand {
+    width: 50%;
+    height: 6px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hour-hand {
+    height: 8px;
+    background: #ff00ff;
+}
+
+.minute-hand {
+    height: 6px;
+    background: #00ffff;
+}
+
+.second-hand {
+    height: 4px;
+    background: #ff0000;
+}
+
+.time {
+    font-size: 2em;
+    margin-top: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
